@@ -43,21 +43,12 @@ const MyTabs = createBottomTabNavigator()
 function MoviesTabNavigator () {
     return (
         <MyTabs.Navigator
-            tabBarOptions={{
-                showLabel: false,
-                showIcon: true,
-                activeBackgroundColor: '#DDDDDD',
-                inactiveBackgroundColor: '#FFFFFF'
+            screenOptions={{
+                tabBarShowLabel: false,
+                tabBarActiveBackgroundColor: '#DDDDDD',
+                tabBarInactiveBackgroundColor: '#FFFFFF'
 
             }}>
-            {/* <MyTabs.Screen
-                name="Test"
-                component={Test}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="test" color={color} size={size} />
-                    ),
-                }} /> */}
             <MyTabs.Screen
                 name="Search"
                 component={SearchStackNavigator}
